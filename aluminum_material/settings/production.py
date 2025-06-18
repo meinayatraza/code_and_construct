@@ -1,15 +1,16 @@
+# aluminum_material/settings/production.py
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['yourdomain.com']  # Update with your domain
+ALLOWED_HOSTS = ['yourdomain.com']  # Replace with your actual domain
 
-# Configure production database
+# Database (example for PostgreSQL)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aluminum_material',
         'USER': 'dbuser',
-        'PASSWORD': '**********',  # Use environment variables in real setup
+        'PASSWORD': 'your_password',  # Use environment variables in production
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -19,3 +20,5 @@ DATABASES = {
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
