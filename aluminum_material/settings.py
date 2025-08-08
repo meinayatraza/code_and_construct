@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'aluminum_material.urls'
+ROOT_URLCONF = 'code_and_construct.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'aluminum_material.wsgi.application'
+WSGI_APPLICATION = 'code_and_construct.wsgi.application'
 
 
 # Database
